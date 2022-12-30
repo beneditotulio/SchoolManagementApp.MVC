@@ -1,0 +1,26 @@
+CREATE DATABASE SchoolManagementDb
+GO
+USE SchoolManagementDb
+
+CREATE TABLE Students(
+    Id INT PRIMARY KEY IDENTITY,
+	FirstName NVARCHAR (50) NULL,
+    LastName NVARCHAR (50) NULL,
+	DateOfBirth DATE NULL,
+)
+GO
+
+CREATE TABLE Lectures(
+    Id INT PRIMARY KEY IDENTITY,
+    FirstName NVARCHAR(50) NOT NULL,
+    LastName NVARCHAR (50) NOT NULL
+)
+GO
+
+CREATE TABLE Courses(
+    Id INT PRIMARY KEY IDENTITY,
+    Name NVARCHAR(50) NOT NULL,
+    Code NVARCHAR(5) UNIQUE,
+    Credits INT
+)
+GO
